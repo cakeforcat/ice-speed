@@ -44,7 +44,7 @@ class Indicator extends PanelMenu.Button {
         // Create a Soup session
         const session = new Soup.Session();
 
-        // Create a fetch function
+        // Create a fetch function 
         const fetch = makeFetch(session);
 
         const label = new St.Label({
@@ -129,11 +129,19 @@ class Indicator extends PanelMenu.Button {
 
             try {
 
-                const res = await fetch('https://railnet.oebb.at/api/speed')
+                const res = await fetch('https://railnet.oebb.at/assets/media/fis/combined.json')
+                const json = await res.json()
                 
-                const speed = await res.text()
+                const speed = json.latestStatus.speed
+                const train = `${json.trainType} ${json.lineNumber}`
+
+                const nextStationArrival = (!!json.nextStation.arrival.forecast) ? json.nextStation.arrival.forecast : json.nextStation.arrival.scheduled  
+                const nextStop = `${json.nextStation.name.de} ${nextStationArrival}`
+
+
+                
                 global_error = undefined;
-                label.text = `RailJet: \n ${speed} km/h`;
+                label.text = `${train} | ${speed} km/h | ${nextStop}`;
                 return true
             }
             catch(e){
