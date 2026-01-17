@@ -18,6 +18,5 @@ Currently the extension is under development and not publish to gnome-extensions
 You can install locally by running this command:
 
 ```
-git clone https://github.com/sidney-pauly/train-vitals ~/.local/share gnome-shell/extensions/train-vitals@sidneypauly.me
+git clone https://github.com/sidney-pauly/train-vitals ~/.local/share/gnome-shell/extensions/train-vitals@sidneypauly.me
 ```
-
