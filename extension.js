@@ -148,7 +148,7 @@ class Indicator extends PanelMenu.Button {
 
                 const nextStop = dataStatus.trip.stops.find(s => s.station.evaNr == dataStatus.trip.stopInfo.actualNext)
 
-                const nextStopTime = new Date(nextStop.timetable.scheduledArrivalTime)
+                const nextStopTime = new Date(nextStop.timetable.actualArrivalTime)
                 const nextStopTimeFormatted = nextStopTime.toLocaleTimeString(undefined, {hour: '2-digit', minute:'2-digit'})
 
                 global_error = undefined;
