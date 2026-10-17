@@ -202,7 +202,7 @@ class Indicator extends PanelMenu.Button {
 
                 global_error = undefined;
                 train_label.text = `${trainInfo}`;
-                speed_label.text = `${speed} km/h`;
+                speed_label.text = `${speed}`;
                 stop_label.text = `${nextStop.station.name}`;
                 stop_time_label.text = `${nextStopTimeFormatted}`;
 
@@ -236,7 +236,7 @@ class Indicator extends PanelMenu.Button {
                 
                 global_error = undefined;
                 train_label.text = `${train}`;
-                speed_label.text = `${speed} km/h`;
+                speed_label.text = `${speed}`;
                 stop_label.text = `${nextStop}`;
                 stop_time_label.text = `${nextStationArrival}`;
 
