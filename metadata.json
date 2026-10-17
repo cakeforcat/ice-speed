@@ -3,6 +3,7 @@
   "description": "Shows the current train speed when connected to local WiFi onboard ICE and RJ trains",
   "uuid": "train-vitals@sidneypauly.me",
   "shell-version": [
+    "50",
     "49",
     "48"
   ]
